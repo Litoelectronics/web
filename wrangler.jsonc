@@ -1,0 +1,10 @@
+{
+  "$schema": "https://raw.githubusercontent.com/cloudflare/workers-sdk/main/packages/wrangler/templates/wrangler.schema.json",
+  "name": "lito-tailwind",
+  "main": ".open-next/worker.js",
+  "compatibility_date": "2025-01-01",
+  "assets": {
+    "directory": ".open-next/assets",
+    "binding": "ASSETS"
+  }
+}

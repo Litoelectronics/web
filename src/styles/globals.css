@@ -1,0 +1,22 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom global styles */
+html, body, #__next {
+  height: 100%;
+}
+
+body {
+  @apply antialiased text-slate-900 bg-slate-100;
+  background-image: radial-gradient(circle at top left, rgba(59, 130, 246, 0.08), transparent 30%), radial-gradient(circle at bottom right, rgba(15, 23, 42, 0.08), transparent 30%);
+}
+
+/* Example container utility fallback for older browsers */
+.container {
+  max-width: 1280px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
