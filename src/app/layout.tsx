@@ -1,5 +1,6 @@
 import '@/styles/globals.css';
 import { Navbar } from '@/components/Navbar';
+import { StickyCallButton } from '@/components/StickyCallButton';
 
 export const metadata = {
   metadataBase: new URL('https://litoelectronics.com'),
@@ -100,6 +101,7 @@ export default function RootLayout({
       <body id="top" className="bg-slate-100 text-slate-900 antialiased">
         <Navbar />
         {children}
+        <StickyCallButton />
       </body>
     </html>
   );
