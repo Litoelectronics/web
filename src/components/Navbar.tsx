@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import Image from 'next/image';
 import { useState } from 'react';
 
 const navLinks = [
@@ -20,13 +21,15 @@ export function Navbar() {
   return (
     <header className="relative sticky top-0 z-50 border-b border-slate-200 bg-white shadow-xl backdrop-blur-xl">
       <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
-        <a href="/" className="flex items-center rounded-2xl bg-white/95 p-2 shadow-sm ring-1 ring-white/40">
-          <img
+        <Link href="/" className="flex items-center rounded-2xl bg-white/95 p-2 shadow-sm ring-1 ring-white/40">
+          <Image
             src="/images/logolito.png"
             alt="Lito Electronics logo"
+            width={120}
+            height={32}
             className="h-8 w-auto object-contain"
           />
-        </a>
+        </Link>
 
         <nav className="hidden items-center gap-8 md:flex">
           {navLinks.map((link) => (

@@ -12,6 +12,15 @@ export { DOQueueHandler } from "./.build/durable-objects/queue.js";
 export { DOShardedTagCache } from "./.build/durable-objects/sharded-tag-cache.js";
 //@ts-expect-error: Will be resolved by wrangler build
 export { BucketCachePurge } from "./.build/durable-objects/bucket-cache-purge.js";
+process.env.NEXT_PHASE ??= "phase-production-build";
+if (!globalThis.__opennext_require_shim__) {
+    globalThis.__opennext_require_shim__ = true;
+    globalThis.require = function(id) {
+        if (String(id || "").includes("instrumentation.js")) return {};
+        throw new Error(`Dynamic require of "${id}" is not supported`);
+    };
+}
+
 export default {
     async fetch(request, env, ctx) {
         return runWithCloudflareRequestContext(request, env, ctx, async () => {
@@ -29,6 +38,13 @@ export default {
             if (url.pathname ===
                 `${globalThis.__NEXT_BASE_PATH__}/_next/image${globalThis.__TRAILING_SLASH__ ? "/" : ""}`) {
                 return await handleImageRequest(url, request.headers, env);
+            }
+            // __OPENNEXT_ASSET_FIRST__
+            if ((request.method === "GET" || request.method === "HEAD") && !url.pathname.startsWith("/api")) {
+                const staticResponse = await env.ASSETS.fetch(request);
+                if (staticResponse && staticResponse.status !== 404) {
+                    return staticResponse;
+                }
             }
             // - `Request`s are handled by the Next server
             const reqOrResp = await middlewareHandler(request, env, ctx);

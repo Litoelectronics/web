@@ -1,5 +1,6 @@
 import { Footer } from '@/components/Footer';
 import { homepageConfig } from '@/config/homepage';
+import Image from 'next/image';
 
 export const metadata = {
   title: 'Services | Lito Electronics - DStv Installer Near Me, TV Mounting, CCTV, Starlink Installation',
@@ -59,14 +60,14 @@ export default function ServicePage() {
         </div>
         <div className="grid gap-6 md:grid-cols-2">
           <a href="https://www.litoelectronics.com" target="_blank" rel="noreferrer" className="overflow-hidden rounded-[2rem] bg-white shadow-xl transition hover:-translate-y-1">
-            <img src="/images/Dstv dish 05.jpg" alt="Lito Electronics professional satellite installation" className="h-80 w-full object-cover" />
+            <Image width={600} height={320} src="/images/Dstv dish 05.jpg" alt="Lito Electronics professional satellite installation" className="h-80 w-full object-cover" />
             <div className="p-6">
               <h3 className="text-xl font-bold text-slate-900">Professional Satellite Installation</h3>
               <p className="mt-2 text-slate-600 text-sm">Expert installation for Dstv, Zuku, Gotv, and Startimes systems.</p>
             </div>
           </a>
           <a href="https://www.litoelectronics.com" target="_blank" rel="noreferrer" className="overflow-hidden rounded-[2rem] bg-white shadow-xl transition hover:-translate-y-1">
-            <img src="/images/CCTV-Camera installation.jpg" alt="Lito Electronics security system setup" className="h-80 w-full object-cover" />
+            <Image width={600} height={320} src="/images/CCTV-Camera installation.jpg" alt="Lito Electronics security system setup" className="h-80 w-full object-cover" />
             <div className="p-6">
               <h3 className="text-xl font-bold text-slate-900">Security & Starlink Setup</h3>
               <p className="mt-2 text-slate-600 text-sm">CCTV and Starlink solutions for reliable home and business connectivity.</p>

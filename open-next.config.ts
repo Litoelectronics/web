@@ -1,5 +1,10 @@
 import { defineCloudflareConfig } from '@opennextjs/cloudflare';
 
 export default defineCloudflareConfig({
-  // Cloudflare-specific OpenNext config
+  middleware: {
+    external: true,
+    override: {
+      wrapper: "cloudflare-node",
+    },
+  },
 });

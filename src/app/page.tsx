@@ -1,6 +1,7 @@
 // src/app/page.tsx
 import { homepageConfig } from '@/config/homepage';
 import { Footer } from '@/components/Footer';
+import Image from 'next/image';
 
 export const metadata = {
   title: 'DStv Installer Near Me | CCTV, TV Mounting & Starlink in Nairobi',
@@ -75,21 +76,21 @@ export default function HomePage() {
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           <a href="https://www.litoelectronics.com" target="_blank" rel="noreferrer" className="group block overflow-hidden rounded-[2rem] border border-slate-200 bg-white shadow-xl transition hover:-translate-y-1">
-            <img src="/images/dish.png" alt="Satellite installation showcase" className="h-64 w-full object-cover transition duration-500 group-hover:scale-105" />
+            <Image width={400} height={256} src="/images/dish.png" alt="Satellite installation showcase" className="h-64 w-full object-cover transition duration-500 group-hover:scale-105" />
             <div className="p-6">
               <h3 className="text-xl font-bold text-slate-900">Quality Satellite Installations</h3>
               <p className="mt-2 text-slate-600 text-sm">Professional Dstv, Zuku and Startimes setups with clean cable management.</p>
             </div>
           </a>
           <a href="https://www.litoelectronics.com" target="_blank" rel="noreferrer" className="group block overflow-hidden rounded-[2rem] border border-slate-200 bg-white shadow-xl transition hover:-translate-y-1">
-            <img src="/images/CCTV-Camera installation.jpg" alt="CCTV and security installation showcase" className="h-64 w-full object-cover transition duration-500 group-hover:scale-105" />
+            <Image width={400} height={256} src="/images/CCTV-Camera installation.jpg" alt="CCTV and security installation showcase" className="h-64 w-full object-cover transition duration-500 group-hover:scale-105" />
             <div className="p-6">
               <h3 className="text-xl font-bold text-slate-900">Secure CCTV Solutions</h3>
               <p className="mt-2 text-slate-600 text-sm">CCTV and access control installs for homes and businesses.</p>
             </div>
           </a>
           <a href="https://www.litoelectronics.com" target="_blank" rel="noreferrer" className="group block overflow-hidden rounded-[2rem] border border-slate-200 bg-white shadow-xl transition hover:-translate-y-1">
-            <img src="/images/Starlink 1-min.jpg" alt="Starlink and internet installation showcase" className="h-64 w-full object-cover transition duration-500 group-hover:scale-105" />
+            <Image width={400} height={256} src="/images/Starlink 1-min.jpg" alt="Starlink and internet installation showcase" className="h-64 w-full object-cover transition duration-500 group-hover:scale-105" />
             <div className="p-6">
               <h3 className="text-xl font-bold text-slate-900">Starlink & Internet Setup</h3>
               <p className="mt-2 text-slate-600 text-sm">Fast Starlink alignment and router configuration for reliable connectivity.</p>
