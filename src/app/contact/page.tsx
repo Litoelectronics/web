@@ -21,8 +21,10 @@ export const metadata = {
 export default function ContactPage() {
   return (
     <main className="min-h-screen bg-slate-50 text-slate-900">
-      <section className="bg-gradient-to-r from-blue-900 to-indigo-950 text-white py-24 px-6">
-        <div className="max-w-5xl mx-auto text-center">
+      <section className="bg-gradient-to-r from-blue-900 to-indigo-950 text-white py-24 px-6 relative overflow-hidden">
+        <div className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-20" style={{ backgroundImage: "url('/images/Tv mounted on wall.webp')" }} />
+        <div className="absolute inset-0 opacity-30 bg-[radial-gradient(circle_at_top_left,_rgba(255,212,0,0.16),_transparent_25%),radial-gradient(circle_at_bottom_right,_rgba(255,255,255,0.12),_transparent_26%)] pointer-events-none" />
+        <div className="relative max-w-5xl mx-auto text-center">
           <p className="text-sm uppercase tracking-[0.3em] text-blue-200 mb-4">Get in touch</p>
           <h1 className="text-4xl md:text-5xl font-extrabold tracking-tight mb-6">
             Contact Lito Electronics

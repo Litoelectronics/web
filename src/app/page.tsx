@@ -35,12 +35,15 @@ export default function HomePage() {
   return (
     <main className="min-h-screen bg-slate-100 text-slate-900">
       {/* Top Notification Bar */}
-      <div className="bg-[#ffd400] text-slate-950 text-center py-2 px-4 font-semibold text-sm">
-        {homepageConfig.hero.promo}
+      <div className="bg-[#ffd400] text-slate-950 py-2 px-4 font-semibold text-sm overflow-hidden whitespace-nowrap">
+        <p className="animate-[marquee_20s_linear_infinite] inline-block">
+          {homepageConfig.hero.promo}
+        </p>
       </div>
 
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-[#04142f] via-[#0a2d6a] to-[#0b2961] text-white py-24 px-6 relative overflow-hidden">
+        <div className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-20" style={{ backgroundImage: "url('/images/DStv fullkit.jpg')" }} />
         <div className="absolute inset-0 opacity-30 bg-[radial-gradient(circle_at_top_left,_rgba(255,212,0,0.16),_transparent_25%),radial-gradient(circle_at_bottom_right,_rgba(255,255,255,0.12),_transparent_26%)] pointer-events-none" />
         <div className="relative max-w-4xl mx-auto text-center">
           <span className="bg-blue-500/20 text-blue-200 border border-blue-500/30 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider mb-4 inline-block">

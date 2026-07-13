@@ -21,8 +21,10 @@ export const metadata = {
 export default function AreasPage() {
   return (
     <main className="min-h-screen bg-slate-50 text-slate-900">
-      <section className="bg-gradient-to-r from-slate-900 via-slate-800 to-slate-950 text-white py-24 px-6">
-        <div className="max-w-5xl mx-auto text-center">
+      <section className="bg-gradient-to-r from-slate-900 via-slate-800 to-slate-950 text-white py-24 px-6 relative overflow-hidden">
+        <div className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-20" style={{ backgroundImage: "url('/images/cctv camera.jpg')" }} />
+        <div className="absolute inset-0 opacity-30 bg-[radial-gradient(circle_at_top_left,_rgba(255,212,0,0.16),_transparent_25%),radial-gradient(circle_at_bottom_right,_rgba(255,255,255,0.12),_transparent_26%)] pointer-events-none" />
+        <div className="relative max-w-5xl mx-auto text-center">
           <p className="text-sm uppercase tracking-[0.3em] text-slate-400 mb-4">Coverage Area</p>
           <h1 className="text-4xl md:text-5xl font-extrabold tracking-tight mb-6">
             Areas We Serve Across Nairobi, Kiambu, Thika & Beyond

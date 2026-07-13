@@ -13,7 +13,7 @@ export const homepageConfig = {
     badge: "Accredited Installers in Nairobi & Kiambu",
     title: "Accredited Dstv, Zuku, Gotv, Startimes, CCTV, and Starlink Installers",
     subtitle: "Professional installation services for homes and businesses across Nairobi, Kiambu, Thika, and surrounding regions. 24/7 service with guaranteed quality.",
-    promo: "🔥 Drop-in New Dstv Installation: Get Dstv HD Fullkit plus installation for Kes 6,000 (Was Kes 7,500)"
+    promo: "🔥 Drop-in New Dstv Installation: Get Dstv HD Fullkit plus installation for Kes 6,000 (Was Kes 7,500) | 📞 Call us today at 0725065190 for fast, same-day installation! | 📡 Satellite dish installation and Repairs Starts from Kes 1,500."
   },
   features: [
     { title: "Affordable Pricing", desc: "Top-quality products and services starting from Kes 1,500." },
