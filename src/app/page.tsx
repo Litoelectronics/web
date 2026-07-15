@@ -1,7 +1,6 @@
 // src/app/page.tsx
 import { homepageConfig } from '@/config/homepage';
 import { Footer } from '@/components/Footer';
-import Image from 'next/image';
 
 export const metadata = {
   title: 'DStv Installer Near Me | CCTV, TV Mounting & Starlink in Nairobi',
@@ -35,15 +34,12 @@ export default function HomePage() {
   return (
     <main className="min-h-screen bg-slate-100 text-slate-900">
       {/* Top Notification Bar */}
-      <div className="bg-[#ffd400] text-slate-950 py-2 px-4 font-semibold text-sm overflow-hidden whitespace-nowrap">
-        <p className="animate-[marquee_20s_linear_infinite] inline-block">
-          {homepageConfig.hero.promo}
-        </p>
+      <div className="bg-[#ffd400] text-slate-950 text-center py-2 px-4 font-semibold text-sm">
+        {homepageConfig.hero.promo}
       </div>
 
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-[#04142f] via-[#0a2d6a] to-[#0b2961] text-white py-24 px-6 relative overflow-hidden">
-        <div className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-20" style={{ backgroundImage: "url('/images/DStv fullkit.jpg')" }} />
         <div className="absolute inset-0 opacity-30 bg-[radial-gradient(circle_at_top_left,_rgba(255,212,0,0.16),_transparent_25%),radial-gradient(circle_at_bottom_right,_rgba(255,255,255,0.12),_transparent_26%)] pointer-events-none" />
         <div className="relative max-w-4xl mx-auto text-center">
           <span className="bg-blue-500/20 text-blue-200 border border-blue-500/30 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider mb-4 inline-block">
@@ -79,21 +75,21 @@ export default function HomePage() {
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           <a href="https://www.litoelectronics.com" target="_blank" rel="noreferrer" className="group block overflow-hidden rounded-[2rem] border border-slate-200 bg-white shadow-xl transition hover:-translate-y-1">
-            <Image width={400} height={256} src="/images/dish.png" alt="Satellite installation showcase" className="h-64 w-full object-cover transition duration-500 group-hover:scale-105" />
+            <img src="/images/dish.png" alt="Satellite installation showcase" className="h-64 w-full object-cover transition duration-500 group-hover:scale-105" />
             <div className="p-6">
               <h3 className="text-xl font-bold text-slate-900">Quality Satellite Installations</h3>
               <p className="mt-2 text-slate-600 text-sm">Professional Dstv, Zuku and Startimes setups with clean cable management.</p>
             </div>
           </a>
           <a href="https://www.litoelectronics.com" target="_blank" rel="noreferrer" className="group block overflow-hidden rounded-[2rem] border border-slate-200 bg-white shadow-xl transition hover:-translate-y-1">
-            <Image width={400} height={256} src="/images/CCTV-Camera installation.jpg" alt="CCTV and security installation showcase" className="h-64 w-full object-cover transition duration-500 group-hover:scale-105" />
+            <img src="/images/CCTV-Camera installation.jpg" alt="CCTV and security installation showcase" className="h-64 w-full object-cover transition duration-500 group-hover:scale-105" />
             <div className="p-6">
               <h3 className="text-xl font-bold text-slate-900">Secure CCTV Solutions</h3>
               <p className="mt-2 text-slate-600 text-sm">CCTV and access control installs for homes and businesses.</p>
             </div>
           </a>
           <a href="https://www.litoelectronics.com" target="_blank" rel="noreferrer" className="group block overflow-hidden rounded-[2rem] border border-slate-200 bg-white shadow-xl transition hover:-translate-y-1">
-            <Image width={400} height={256} src="/images/Starlink 1-min.jpg" alt="Starlink and internet installation showcase" className="h-64 w-full object-cover transition duration-500 group-hover:scale-105" />
+            <img src="/images/Starlink 1-min.jpg" alt="Starlink and internet installation showcase" className="h-64 w-full object-cover transition duration-500 group-hover:scale-105" />
             <div className="p-6">
               <h3 className="text-xl font-bold text-slate-900">Starlink & Internet Setup</h3>
               <p className="mt-2 text-slate-600 text-sm">Fast Starlink alignment and router configuration for reliable connectivity.</p>

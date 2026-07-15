@@ -1,6 +1,5 @@
 import { Footer } from '@/components/Footer';
 import { homepageConfig } from '@/config/homepage';
-import Image from 'next/image';
 
 export const metadata = {
   title: 'Services | Lito Electronics - DStv Installer Near Me, TV Mounting, CCTV, Starlink Installation',
@@ -22,10 +21,8 @@ export const metadata = {
 export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-50 text-slate-900">
-      <section className="bg-gradient-to-r from-blue-900 to-indigo-950 text-white py-24 px-6 relative overflow-hidden">
-        <div className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-20" style={{ backgroundImage: "url('/images/Dstv dish w.jpg')" }} />
-        <div className="absolute inset-0 opacity-30 bg-[radial-gradient(circle_at_top_left,_rgba(255,212,0,0.16),_transparent_25%),radial-gradient(circle_at_bottom_right,_rgba(255,255,255,0.12),_transparent_26%)] pointer-events-none" />
-        <div className="relative max-w-5xl mx-auto text-center">
+      <section className="bg-gradient-to-r from-blue-900 to-indigo-950 text-white py-24 px-6">
+        <div className="max-w-5xl mx-auto text-center">
           <p className="text-sm uppercase tracking-[0.3em] text-blue-200 mb-4">Professional Installation Services</p>
           <h1 className="text-4xl md:text-5xl font-extrabold tracking-tight mb-6">
             Complete Service Solutions from Lito Electronics
@@ -62,14 +59,14 @@ export default function ServicePage() {
         </div>
         <div className="grid gap-6 md:grid-cols-2">
           <a href="https://www.litoelectronics.com" target="_blank" rel="noreferrer" className="overflow-hidden rounded-[2rem] bg-white shadow-xl transition hover:-translate-y-1">
-            <Image width={600} height={320} src="/images/Dstv dish 05.jpg" alt="Lito Electronics professional satellite installation" className="h-80 w-full object-cover" />
+            <img src="/images/Dstv dish 05.jpg" alt="Lito Electronics professional satellite installation" className="h-80 w-full object-cover" />
             <div className="p-6">
               <h3 className="text-xl font-bold text-slate-900">Professional Satellite Installation</h3>
               <p className="mt-2 text-slate-600 text-sm">Expert installation for Dstv, Zuku, Gotv, and Startimes systems.</p>
             </div>
           </a>
           <a href="https://www.litoelectronics.com" target="_blank" rel="noreferrer" className="overflow-hidden rounded-[2rem] bg-white shadow-xl transition hover:-translate-y-1">
-            <Image width={600} height={320} src="/images/CCTV-Camera installation.jpg" alt="Lito Electronics security system setup" className="h-80 w-full object-cover" />
+            <img src="/images/CCTV-Camera installation.jpg" alt="Lito Electronics security system setup" className="h-80 w-full object-cover" />
             <div className="p-6">
               <h3 className="text-xl font-bold text-slate-900">Security & Starlink Setup</h3>
               <p className="mt-2 text-slate-600 text-sm">CCTV and Starlink solutions for reliable home and business connectivity.</p>
